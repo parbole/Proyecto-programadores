@@ -1,4 +1,6 @@
 import java.text.DecimalFormat;
+import java.util.Scanner;
+
 public class ProyectoProgramadores {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
@@ -48,7 +50,41 @@ public class ProyectoProgramadores {
                     break;
             }
 
-        } else if (eleccion == 3) { //inicio de la condicion de paginas web
+        }
+        if (eleccion == 2) {
+            System.out.println("Seleccione el tipo de sistema de operativo movil : ");
+
+            System.out.println("1. Android");
+            System.out.println("2. IOS");
+            System.out.println("3. Windows Phone");
+            System.out.println("4. Multiplataforma");
+
+            eleccion = entrada.nextInt();
+            switch (eleccion) {
+                case 1:
+                    precio = base + 1000000;
+                    tiempo = 4;
+                    tipo = "Aplicación para el sistema operativo Android";
+                    break;
+                case 2:
+                    precio = base + 2000000;
+                    tiempo = 4;
+                    tipo = "Aplicación para el sistema operativo IOS";
+                    break;
+                case 3:
+                    precio = base + 1000000;
+                    tiempo = 4;
+                    tipo = "Aplicación para el sistema operativo Windows Phone";
+                    break;
+                case 4:
+                    precio = base + 2500000;
+                    tiempo = 4;
+                    tipo = "Aplicación multiplataforma";
+                    break;
+            }
+
+        }        
+        else if (eleccion == 3) { //inicio de la condicion de paginas web
             precio = base + 1000000 + 250000 + 42000;
             tiempo = 4;
             tipo = "pagina web";
